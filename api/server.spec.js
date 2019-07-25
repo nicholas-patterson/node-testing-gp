@@ -1,7 +1,9 @@
 function sum(a, b) {
   if (
     typeof a !== 'number' ||
-    typeof b !== 'number'
+    typeof b !== 'number' ||
+    isNaN(a) ||
+    isNaN(b) 
   ) {
     return null;
   }
@@ -20,5 +22,9 @@ describe('sum function', () => {
     expect(sum(null, 3)).toBe(null);
     expect(sum(7, undefined)).toBe(null);
     expect(sum(7, NaN)).toBe(null);
+  });
+
+  it('can add up any number of number arguments', () => {
+    expect(sum(1, 2, 3)).toBe(6);
   });
 });
