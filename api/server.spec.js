@@ -18,6 +18,10 @@ describe('server', () => {
         expect(res.body).toEqual({ api: 'up' });
       });
   });
+
+  it('[GET] /hobbits ALSO WORKS', () => {
+    // DO IT!!
+  });
 });
 
 describe('sum function', () => {
