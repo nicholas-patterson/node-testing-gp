@@ -12,7 +12,11 @@ describe('server', () => {
       // chain a lot of stuff
       .get('/')
       .expect(200)
-
+      .expect('Content-Type', /json/)
+      .expect('Content-Length', '12')
+      .then(res => {
+        expect(res.body).toEqual({ api: 'up' });
+      });
   });
 });
 
