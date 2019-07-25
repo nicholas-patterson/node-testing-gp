@@ -35,6 +35,7 @@ describe('sum function', () => {
     // that actual output is equal to expected output
 
     expect(sum(1, 2)).toBe(3);
+    expect(sum(1, -2)).toBe(-1);
   });
 
   xit('returns null if passed an arg which is not a number!!', () => {
