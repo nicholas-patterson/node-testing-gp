@@ -1,13 +1,6 @@
-function sum(a, b) {
-  if (
-    typeof a !== 'number' ||
-    typeof b !== 'number' ||
-    isNaN(a) ||
-    isNaN(b) 
-  ) {
-    return null;
-  }
-  return a + b;
+function sum(...numbers) {
+  // work to do...
+  return numbers.reduce((acc, n) => acc + n);
 }
 
 describe('sum function', () => {
