@@ -8,6 +8,10 @@ const request = require('supertest');
 
 describe('server', () => {
   it('[GET] / WORKS!', () => {
+    return request(server)
+      // chain a lot of stuff
+      .get('/')
+      .expect(200)
 
   });
 });
