@@ -20,7 +20,12 @@ describe('server', () => {
   });
 
   it('[GET] /hobbits ALSO WORKS', () => {
-    // DO IT!!
+    return request(server)
+      .get('/hobbits')
+      .expect(200)
+      .then(res => {
+        expect(res.body).toBeInstanceOf(Array);
+      });
   });
 });
 
